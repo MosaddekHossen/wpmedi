@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php echo language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 
 <head>
     <!-- Meta Tags -->
@@ -17,7 +17,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <!-- Preloader -->
     <div class="preloader">
         <div class="loader">
