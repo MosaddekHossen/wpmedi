@@ -29,6 +29,7 @@ add_action('after_setup_theme', 'medi_theme_setup');
 // wp_enqueue_scripts
 function medi_add_theme_scripts()
 {
+    wp_enqueue_style('fonts', medi_fonts_url(), array(), '1.0.0', 'all');
     wp_enqueue_style('animate', get_template_directory_uri() . '/assets/css/animate.min.css', array(), '1.0.0', 'all');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '1.0.0', 'all');
     wp_enqueue_style('datepicker', get_template_directory_uri() . '/assets/css/datepicker.css', array(), '1.0.0', 'all');
@@ -70,3 +71,19 @@ function medi_add_theme_scripts()
     }
 }
 add_action('wp_enqueue_scripts', 'medi_add_theme_scripts');
+
+// medi_fonts_url
+function medi_fonts_url()
+{
+    $font_url = '';
+    if ('off' !== _x('on', 'Google font: on or off', 'medi')) {
+        $font_url = 'https://fonts.googleapis.com/css?' . urlencode('family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+    }
+    return $font_url;
+}
+
+// outside file calling
+function medi_header()
+{
+    get_template_part('/inc/template-parts/header/header-1');
+}
