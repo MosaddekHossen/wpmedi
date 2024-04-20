@@ -21,8 +21,12 @@ $medi_header_email = get_theme_mod('header_email', 'support@yourmail.com');
                 <div class="col-lg-6 col-md-7 col-12">
                     <!-- Top Contact -->
                     <ul class="top-contact">
-                        <li><i class="fa fa-phone"></i><?php echo ($medi_header_phone); ?></li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com"><?php echo ($medi_header_email); ?></a></li>
+                        <?php if (!empty($medi_header_phone)) : ?>
+                            <li><i class="fa fa-phone"></i><?php echo esc_html($medi_header_phone); ?></li>
+                        <?php endif; ?>
+                        <?php if (!empty($medi_header_email)) : ?>
+                            <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com"><?php echo esc_html($medi_header_email); ?></a></li>
+                        <?php endif; ?>
                     </ul>
                     <!-- End Top Contact -->
                 </div>
@@ -38,7 +42,7 @@ $medi_header_email = get_theme_mod('header_email', 'support@yourmail.com');
                     <div class="col-lg-3 col-md-3 col-12">
                         <!-- Start Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="#"></a>
+                            <?php medi_logo(); ?>
                         </div>
                         <!-- End Logo -->
                         <!-- Mobile Nav -->
