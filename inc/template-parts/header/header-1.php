@@ -1,3 +1,7 @@
+<?php
+$medi_header_phone = get_theme_mod('header_phone', '+880 1234 56789');
+$medi_header_email = get_theme_mod('header_email', 'support@yourmail.com');
+?>
 <!-- Header Area -->
 <header class="header">
     <!-- Topbar -->
@@ -17,8 +21,8 @@
                 <div class="col-lg-6 col-md-7 col-12">
                     <!-- Top Contact -->
                     <ul class="top-contact">
-                        <li><i class="fa fa-phone"></i>+880 1234 56789</li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+                        <li><i class="fa fa-phone"></i><?php echo ($medi_header_phone); ?></li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com"><?php echo ($medi_header_email); ?></a></li>
                     </ul>
                     <!-- End Top Contact -->
                 </div>

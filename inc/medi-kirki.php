@@ -26,17 +26,17 @@ function medi_header_info()
             'settings' => 'header_phone',
             'label'    => esc_html__('Header Phone', 'medi'),
             'section'  => 'header_info_section_id',
-            'default'  => esc_html__('Header phone here', 'medi'),
+            'default'  => esc_html__('+880 1234 56789', 'medi'),
             'priority' => 10,
         ]
     );
 
     new \Kirki\Field\Text(
         [
-            'settings' => 'header_email', 
+            'settings' => 'header_email',
             'label'    => esc_html__('Header Email', 'medi'),
             'section'  => 'header_info_section_id',
-            'default'  => esc_html__('Header email here', 'medi'),
+            'default'  => esc_html__('support@yourmail.com', 'medi'),
             'priority' => 10,
         ]
     );
@@ -56,24 +56,24 @@ function medi_header_logo()
         ]
     );
 
-    new \Kirki\Field\Text(
+    new \Kirki\Field\Image(
         [
-            'settings' => 'logo_text_setting', // Changed settings key
-            'label'    => esc_html__('Text Control 1', 'medi'), // Changed label
-            'section'  => 'logo_section_id',
-            'default'  => esc_html__('This is a default value', 'medi'),
-            'priority' => 10,
+            'settings'    => 'medi_header_logo',
+            'label'       => esc_html__('Medi header logo', 'kirki'),
+            'description' => esc_html__('The saved value will be the URL.', 'kirki'),
+            'section'     => 'logo_section_id',
+            'default'     => get_template_directory_uri() . '/assets/img/logo.png',
         ]
     );
-    new \Kirki\Field\Text(
+
+    new \Kirki\Field\Image(
         [
-            'settings' => 'logo_text_setting_2', // Unique settings key
-            'label'    => esc_html__('Text Control 2', 'medi'), // Changed label
-            'section'  => 'logo_section_id',
-            'default'  => esc_html__('This is a default value', 'medi'),
-            'priority' => 20, // Adjusted priority
+            'settings'    => 'image_setting_url',
+            'label'       => esc_html__('Image Control (URL)', 'kirki'),
+            'description' => esc_html__('The saved value will be the URL.', 'kirki'),
+            'section'     => 'logo_section_id',
+            'default'     => get_template_directory_uri() . '/assets/img/logo.png',
         ]
     );
 }
 medi_header_logo();
-?>
