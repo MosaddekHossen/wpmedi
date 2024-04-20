@@ -65,15 +65,5 @@ function medi_header_logo()
             'default'     => get_template_directory_uri() . '/assets/img/logo.png',
         ]
     );
-
-    new \Kirki\Field\Image(
-        [
-            'settings'    => 'image_setting_url',
-            'label'       => esc_html__('Image Control (URL)', 'kirki'),
-            'description' => esc_html__('The saved value will be the URL.', 'kirki'),
-            'section'     => 'logo_section_id',
-            'default'     => get_template_directory_uri() . '/assets/img/logo.png',
-        ]
-    );
 }
 medi_header_logo();

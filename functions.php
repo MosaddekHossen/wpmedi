@@ -1,8 +1,6 @@
 <?php
 
-/**
- * Essential theme supports
- * */
+//  Essential theme supports
 function medi_theme_setup()
 {
     /** automatic feed link*/
@@ -21,7 +19,7 @@ function medi_theme_setup()
     /** HTML5 support **/
     add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
 
-    /** refresh widgest **/
+    /** refresh widgets **/
     add_theme_support('customize-selective-refresh-widgets');
 }
 add_action('after_setup_theme', 'medi_theme_setup');
@@ -34,4 +32,5 @@ function medi_header()
 
 // include_once
 include_once('inc/common/scripts.php');
-include_once('inc/medi-kirki.php');
+include_once('inc/common/medi-kirki.php');
+include_once('inc/common/template-function.php');
