@@ -34,3 +34,4 @@ function medi_header()
 
 // include_once
 include_once('inc/common/scripts.php');
+include_once('inc/medi-kirki.php');
