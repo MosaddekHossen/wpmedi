@@ -1,4 +1,11 @@
 <?php
+
+// medi_header
+function medi_header()
+{
+    get_template_part('/inc/template-parts/header/header-1');
+}
+
 // medi_logo
 function medi_logo()
 {
