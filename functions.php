@@ -24,12 +24,6 @@ function medi_theme_setup()
 }
 add_action('after_setup_theme', 'medi_theme_setup');
 
-// medi_header
-function medi_header()
-{
-    get_template_part('/inc/template-parts/header/header-1');
-}
-
 // include_once
 include_once('inc/common/scripts.php');
 include_once('inc/common/medi-kirki.php');
