@@ -53,7 +53,8 @@ $medi_header_email = get_theme_mod('header_email', 'support@yourmail.com');
                         <!-- Main Menu -->
                         <div class="main-menu">
                             <nav class="navigation">
-                                <ul class="nav menu">
+                                <?php medi_menu(); ?>
+                                <!-- <ul class="nav menu">
                                     <li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">Home Page 1</a></li>
@@ -72,7 +73,7 @@ $medi_header_email = get_theme_mod('header_email', 'support@yourmail.com');
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
+                                </ul> -->
                             </nav>
                         </div>
                         <!--/ End Main Menu -->
