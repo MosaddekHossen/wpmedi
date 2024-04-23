@@ -26,7 +26,6 @@ function medi_theme_setup()
     register_nav_menus(
         array(
             'main-menu' => __('Main Menu', 'harry'),
-            'side-menu' => __('Side Menu', 'harry'),
             'footer-menu' => __('Footer Menu', 'harry'),
         )
     );
