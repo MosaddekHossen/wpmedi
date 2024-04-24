@@ -10,13 +10,7 @@ $medi_header_email = get_theme_mod('header_email', 'support@yourmail.com');
             <div class="row">
                 <div class="col-lg-6 col-md-5 col-12">
                     <!-- Contact -->
-                    <ul class="top-link">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Doctors</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                    <!-- End Contact -->
+                    <?php medi_top_menu(); ?>
                 </div>
                 <div class="col-lg-6 col-md-7 col-12">
                     <!-- Top Contact -->
@@ -54,26 +48,6 @@ $medi_header_email = get_theme_mod('header_email', 'support@yourmail.com');
                         <div class="main-menu">
                             <nav class="navigation">
                                 <?php medi_menu(); ?>
-                                <!-- <ul class="nav menu">
-                                    <li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Home Page 1</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Doctos </a></li>
-                                    <li><a href="#">Services </a></li>
-                                    <li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
-                                        <ul class="dropdown">
-                                            <li><a href="404.html">404 Error</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog-single.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul> -->
                             </nav>
                         </div>
                         <!--/ End Main Menu -->
