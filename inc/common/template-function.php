@@ -16,6 +16,17 @@ function medi_logo()
 }
 
 // medi_menu
+function medi_top_menu()
+{
+    wp_nav_menu(
+        array(
+            'theme_location'  => 'top-menu',
+            'menu_class'      => 'top-link',
+        )
+    );
+}
+
+// medi_menu
 function medi_menu()
 {
     wp_nav_menu(
