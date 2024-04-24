@@ -67,3 +67,29 @@ function medi_header_logo()
     );
 }
 medi_header_logo();
+
+
+// 
+function medi_footer_copyright()
+{
+    new \Kirki\Section(
+        'footer_copyright_section',
+        [
+            'title'       => esc_html__('Footer copyright', 'medi'),
+            'description' => esc_html__('My Copyright Section Description.', 'medi'),
+            'panel'       => 'medi_panel_id',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'footer_copyright',
+            'label'    => esc_html__('Footer Copyright', 'medi'),
+            'section'  => 'footer_copyright_section',
+            'default'  => esc_html__('© Copyright 2024  |  All Rights Reserved by wpthemesgrid.com', 'medi'),
+            'priority' => 10,
+        ]
+    );
+}
+medi_footer_copyright();

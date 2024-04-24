@@ -28,3 +28,18 @@ function medi_menu()
         )
     );
 }
+
+// medi_copyright
+function medi_copyright()
+{
+    $medi_copyright = get_theme_mod('footer_copyright', __('© Copyright 2024  |  All Rights Reserved by wpthemesgrid.com', 'medi'))
+?>
+    <p><?php echo wp_kses_post($medi_copyright); ?></p>
+<?php
+}
+
+// medi_footer
+function medi_footer()
+{
+    get_template_part('/inc/template-parts/footer/footer-1');
+}
